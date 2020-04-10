@@ -38,5 +38,57 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//Update images to the webpage
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const CTAIMAGE = document.querySelector('#cta-img');
+CTAIMAGE.setAttribute('src', 'img/header-img.png');
+
+const MIDDLEIMAGE = document.querySelector('#middle-img');
+MIDDLEIMAGE.setAttribute('src', 'img/mid-page-accent.jpg');
+
+//set the navigation bar
+
+const navAnchorTags = document.querySelectorAll('nav a');
+navAnchorTags[0].textContent = siteContent['nav']['nav-item-1'];
+navAnchorTags[1].textContent = siteContent['nav']['nav-item-2'];
+navAnchorTags[2].textContent = siteContent['nav']['nav-item-3'];
+navAnchorTags[3].textContent = siteContent['nav']['nav-item-4'];
+navAnchorTags[4].textContent = siteContent['nav']['nav-item-5'];
+navAnchorTags[5].textContent = siteContent['nav']['nav-item-6'];
+
+//set the top content
+
+const ctaText = document.querySelector('.cta .cta-text h1');
+ctaText.innerHTML = 'Dom <br> Is <br> Awesome';
+
+const ctaButton = document.querySelector('.cta .cta-text button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+//set the main content
+
+const h4 = document.querySelectorAll('h4');
+h4[0].textContent = siteContent['main-content']['features-h4'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+
+const paragraphs = document.querySelectorAll('p');
+paragraphs[0].textContent = siteContent['main-content']['features-content'];
+paragraphs[1].textContent = siteContent['main-content']['about-content'];
+paragraphs[2].textContent = siteContent['main-content']['services-content'];
+paragraphs[3].textContent = siteContent['main-content']['product-content'];
+paragraphs[4].textContent = siteContent['main-content']['vision-content'];
+
+//set the contact
+h4[5].textContent = siteContent['contact']['contact-h4'];
+paragraphs[5].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
+paragraphs[6].textContent = siteContent['contact']['phone'];
+paragraphs[7].textContent = siteContent['contact']['email'];
+
+//set the footer
+paragraphs[8].textContent = siteContent['footer']['copyright'];
