@@ -92,3 +92,32 @@ paragraphs[7].textContent = siteContent['contact']['email'];
 
 //set the footer
 paragraphs[8].textContent = siteContent['footer']['copyright'];
+
+//stretch
+const getStarted = document.querySelector('.cta .cta-text button');
+getStarted.addEventListener('click', toggleCTAImage);
+getStarted.addEventListener('click', toggleContent);
+CTAIMAGE.style.visibility = 'hidden';
+paragraphs[0].style.visibility = 'hidden';
+paragraphs[1].style.visibility = 'hidden';
+
+function toggleCTAImage(){
+  if(CTAIMAGE.style.visibility === 'hidden'){
+    CTAIMAGE.style.visibility = 'visible';
+  } else {
+    CTAIMAGE.style.visibility = 'hidden';
+  }
+}
+
+function toggleContent(){
+  if(paragraphs[0].style.visibility === 'hidden'){
+    paragraphs[0].style.visibility = 'visible';
+  } else {
+    paragraphs[0].style.visibility = 'hidden';
+  }
+  if(paragraphs[1].style.visibility === 'hidden'){
+    paragraphs[1].style.visibility = 'visible';
+  } else {
+    paragraphs[1].style.visibility = 'hidden';
+  }
+}
