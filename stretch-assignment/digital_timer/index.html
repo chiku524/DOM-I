@@ -3,6 +3,7 @@
   <head>
     <title>DOM I</title>
     <link rel="stylesheet" href="./styles.css">
+    <script type='text/javascript' src='./index.js'></script>
   </head>
   <body>
     <div class="digits">
@@ -11,6 +12,10 @@
       <div class="digit" id="colon">:</div>
       <div class="digit" id="msHundreds">-</div>
       <div class="digit" id="msTens">-</div>
+    </div>
+    <div>
+      <button class='start' onClick='startTimer = setInterval(tick, 10)'>Start!</button>
+      <button class='reset' type='reset' onClick='resetTimer()'>Reset</button>
     </div>
   </body>
 </html>

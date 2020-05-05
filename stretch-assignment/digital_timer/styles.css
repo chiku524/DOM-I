@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -11,4 +12,33 @@ body {
 
 .redDigit {
   color: red;
+}
+
+.start {
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+  height: 50px;
+  width: 80px;
+  animation-name: changeBG;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeBG {
+  from{background-color: white;}
+  to{background-color: black;}
+  from{color: blue;}
+  to{color: white;}
+}
+
+.reset {
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+  height: 50px;
+  width: 80px;
+  animation-name: changeBG;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
 }
