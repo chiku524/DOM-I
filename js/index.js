@@ -60,12 +60,13 @@ navAnchorTags[3].textContent = siteContent['nav']['nav-item-4'];
 navAnchorTags[4].textContent = siteContent['nav']['nav-item-5'];
 navAnchorTags[5].textContent = siteContent['nav']['nav-item-6'];
 
-navAnchorTags[0].style.color = 'green';
-navAnchorTags[1].style.color = 'green';
-navAnchorTags[2].style.color = 'green';
-navAnchorTags[3].style.color = 'green';
-navAnchorTags[4].style.color = 'green';
-navAnchorTags[5].style.color = 'green';
+// navAnchorTags[0].style.color = 'green';
+// navAnchorTags[1].style.color = 'green';
+// navAnchorTags[2].style.color = 'green';
+// navAnchorTags[3].style.color = 'green';
+// navAnchorTags[4].style.color = 'green';
+// navAnchorTags[5].style.color = 'green';
+navAnchorTags.forEach(element => element.style.color = 'green');
 
 const nav = document.querySelector("nav");
 var anchor1 = document.createElement("A");
@@ -76,6 +77,12 @@ anchor1.appendChild(text1);
 nav.prepend(anchor1);
 anchor2.appendChild(text2);
 nav.appendChild(anchor2);
+
+//NodeList is not dynamic, it is static so it must be updated after
+//anchor1 and anchor2 are appended to the navAnchorTags node list
+
+const navAnchorTagsUpdated = document.querySelectorAll("nav a");
+navAnchorTagsUpdated.forEach(element => element.style.color = 'green');
 
 //set the top content
 
