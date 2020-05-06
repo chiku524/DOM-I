@@ -60,6 +60,23 @@ navAnchorTags[3].textContent = siteContent['nav']['nav-item-4'];
 navAnchorTags[4].textContent = siteContent['nav']['nav-item-5'];
 navAnchorTags[5].textContent = siteContent['nav']['nav-item-6'];
 
+navAnchorTags[0].style.color = 'green';
+navAnchorTags[1].style.color = 'green';
+navAnchorTags[2].style.color = 'green';
+navAnchorTags[3].style.color = 'green';
+navAnchorTags[4].style.color = 'green';
+navAnchorTags[5].style.color = 'green';
+
+const nav = document.querySelector("nav");
+var anchor1 = document.createElement("A");
+var text1 = document.createTextNode("Hello World!");
+var anchor2 = document.createElement("A");
+var text2 = document.createTextNode("Goodbye World!");
+anchor1.appendChild(text1);
+nav.prepend(anchor1);
+anchor2.appendChild(text2);
+nav.appendChild(anchor2);
+
 //set the top content
 
 const ctaText = document.querySelector('.cta .cta-text h1');
