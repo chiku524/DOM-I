@@ -83,6 +83,8 @@ nav.appendChild(anchor2);
 
 const navAnchorTagsUpdated = document.querySelectorAll("nav a");
 navAnchorTagsUpdated.forEach(element => element.style.color = 'green');
+navAnchorTagsUpdated[0].href = '#';
+navAnchorTagsUpdated[7].href = '#';
 
 //set the top content
 
